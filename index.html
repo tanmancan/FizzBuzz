@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>FizzBuzz</title>
+</head>
+<body>
+
+<div id="print">
+	
+</div>
+
+<script>
+	var outputArea = document.getElementById('print'),
+		output = '',
+		outputFixed = '';
+		max = 100;
+
+	for(var i=1; i<= max; i++){
+		if(i % 3 == 0 && i % 5 == 0){
+			output += 'FizzBuzz, ';
+		}else if(i % 3 == 0){
+			output += 'Fizz, ';
+		}else if(i % 5 == 0){
+			output += 'Buzz, ';
+		}else{
+			output += i + ', ';
+		}
+	}
+
+	// Remove comma and space form end of string
+	outputFixed = output.slice(0, -2);
+
+	// Print string
+	outputArea.innerHTML = outputFixed;
+</script>
+
+</body>
+</html>
